@@ -1,4 +1,4 @@
-import { SEARCH_NOT_FOUND } from "../types";
+import { SEARCH_NOT_FOUND } from "../common";
 
 const linearSearch = (items: any[], item: any): number => {
 

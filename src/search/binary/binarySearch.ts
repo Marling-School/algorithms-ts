@@ -1,8 +1,8 @@
-import { SEARCH_NOT_FOUND } from "../types"
+import { NO_MATCH } from "../common"
 
 const binarySearch = (items: any[], item: any): number => {
 
-    return SEARCH_NOT_FOUND;
+    return NO_MATCH;
 }
 
 export default binarySearch;
