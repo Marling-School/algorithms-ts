@@ -1,5 +1,7 @@
 from typing import List, Union
 
+from src.sort.swap import swap
+
 StrOrInt = Union[str, int]
 
 
@@ -21,9 +23,7 @@ def insertion_sort(input_list: List[StrOrInt]) -> List[StrOrInt]:
             # The comparator returns -1 if the first item is 'greater than' the second one
             if output_list[lower] > item_to_place:
                 # Temporary variable to prevent overwrites
-                swap: StrOrInt = output_list[lower]
-                output_list[lower] = output_list[upper]
-                output_list[upper] = swap
+                swap(output_list, lower, upper)
             else:
                 # Item to place can be placed early
                 item_place = upper

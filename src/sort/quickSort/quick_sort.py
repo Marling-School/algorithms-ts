@@ -1,5 +1,7 @@
 from typing import List, Union
 
+from src.sort.swap import swap
+
 StrOrInt = Union[str, int]
 
 
@@ -57,13 +59,9 @@ def partition(arr: List[StrOrInt],
         # If current element is smaller than the pivot
         if arr[j] < pivot:
             i += 1  # increment index of smaller element
-            swap = arr[i]
-            arr[i] = arr[j]
-            arr[j] = swap
+            swap(arr, i, j)
 
     # Put the pivot in its place
-    swap = arr[i + 1]
-    arr[i + 1] = arr[right_pointer]
-    arr[right_pointer] = swap
+    swap(arr, i + 1, right_pointer)
 
     return i + 1

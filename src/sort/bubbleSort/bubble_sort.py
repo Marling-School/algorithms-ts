@@ -1,4 +1,5 @@
 from typing import List, Union
+from src.sort.swap import swap
 
 StrOrInt = Union[str, int]
 
@@ -21,9 +22,7 @@ def bubble_sort(input_list: List[StrOrInt]) -> List[StrOrInt]:
             if output_list[current] > output_list[current + 1]:
                 swap_made = True
                 # Temporary variable to prevent overwrites
-                swap: StrOrInt = output_list[current]
-                output_list[current] = output_list[current + 1]
-                output_list[current + 1] = swap
+                swap(output_list, current, current + 1)
 
         # early exit, list already sorted
         if not swap_made:
