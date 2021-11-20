@@ -1,9 +1,6 @@
-from typing import List, Union
+from typing import List
 from math import floor
-
-NO_MATCH = -1
-
-StrOrInt = Union[str, int]
+from src.search import NO_MATCH, StrOrInt
 
 
 def binarySearch(items: List[StrOrInt], itemToFind: StrOrInt) -> int:
